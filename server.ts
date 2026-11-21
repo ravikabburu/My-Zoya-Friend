@@ -10,7 +10,7 @@ dotenv.config();
 
 const app = express();
 const server = http.createServer(app);
-const PORT = 3000;
+const PORT = Number(process.env.PORT)|| 3000;
 
 // Configure server timeouts to be virtually infinite for long-standing connections
 server.timeout = 0; // Disable idle socket timeouts
